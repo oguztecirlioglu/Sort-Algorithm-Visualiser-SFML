@@ -6,9 +6,11 @@ menu::menu(int width, int height) {
 		// handle error
 		std::cout << "error font" << std::endl;
 	}
-	std::vector<std::string> itemNames = { "Bubble Sort", "Quick Sort", "Exit" };
+	std::vector<std::string> itemNames = { "Bubble Sort", "Quick Sort", "Merge Sort","Exit"};
 	assignMenuItems(itemNames);
 
+	//initialise the state variables of this object.
+	numberOfMenuItems = itemNames.size();
 	selectedItemIndex = 0;
 };
 
@@ -16,20 +18,20 @@ menu::~menu() {};
 
 void menu::draw(sf::RenderWindow& window)
 {
-	for (int i = 0; i < constants::NUMBER_OF_ITEMS_ON_MENU; i++) {
+	for (int i = 0; i < numberOfMenuItems; i++) {
 		window.draw(menuItems[i]);
 	}
 }
 
 void menu::assignMenuItems(std::vector<std::string> itemNames) {
-	for (int i = 0; i < itemNames.size(); ++i) {
+	
+	for (int i = 0; i < numberOfMenuItems; ++i) {
 		menuItems[i].setCharacterSize(55);
 		menuItems[i].setFont(font);
 		menuItems[i].setFillColor(sf::Color::Blue);
 		menuItems[i].setString(itemNames[i]);
 		menuItems[i].setPosition(sf::Vector2f(constants::X_WIDTH / 10, (i+1) * (constants::Y_HEIGHT/(itemNames.size()+3)) ));
 	}
-
 	menuItems[0].setFillColor(sf::Color::White);
 }
 
@@ -90,6 +92,13 @@ void drawMenu(menu& sortMenu, sf::RenderWindow& window, std::vector<int>& nums, 
 					break;
 
 				case 2:
+					drawingUtils::grabEvents(window);
+					mergeSort(nums, 0, nums.size() - 1, window);
+					sorted = true;
+
+					break;
+				
+				case 3:
 					window.close();
 					break;
 				}

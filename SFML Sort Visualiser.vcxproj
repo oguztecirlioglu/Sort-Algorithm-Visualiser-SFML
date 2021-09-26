@@ -104,6 +104,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\SortingAlgorithms\mergeSort.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\menu.cpp" />
     <ClCompile Include="src\sortingalgorithms\bubblesort.cpp" />
@@ -112,6 +113,7 @@
     <ClCompile Include="src\sortingalgorithms\utilityfiles\sortingUtilities.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\SortingAlgorithms\mergeSort.h" />
     <ClInclude Include="src\menu.h" />
     <ClInclude Include="src\sortingalgorithms\bubblesort.h" />
     <ClInclude Include="src\sortingalgorithms\quicksort.h" />

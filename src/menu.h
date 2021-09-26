@@ -4,6 +4,7 @@
 #include "SortingAlgorithms/quicksort.h"
 #include "SortingAlgorithms/UtilityFiles/drawingUtilities.h"
 #include "SortingAlgorithms/bubblesort.h"
+#include "SortingAlgorithms/mergeSort.h"
 
 class menu
 {
@@ -17,6 +18,7 @@ public:
 	int getPressedItem();
 
 private:
+	int numberOfMenuItems = constants::NUMBER_OF_ITEMS_ON_MENU;
 	int selectedItemIndex;
 	sf::Font font;
 	sf::Text menuItems[constants::NUMBER_OF_ITEMS_ON_MENU];

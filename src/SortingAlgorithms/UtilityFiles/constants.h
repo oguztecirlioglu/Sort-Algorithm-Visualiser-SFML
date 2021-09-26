@@ -14,7 +14,7 @@ namespace constants {
 	const int Y_HEIGHT = originalY * 100; // Makes the X_WIDTH a multiple of hundred, depending on user screen size.
 	
 	// Menu stuff
-	const int NUMBER_OF_ITEMS_ON_MENU = 3;
+	const int NUMBER_OF_ITEMS_ON_MENU = 4;
 
 
 	// How many numbers to generate, the width of each column etc.
