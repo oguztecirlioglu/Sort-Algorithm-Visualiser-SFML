@@ -49,8 +49,6 @@ void merge(std::vector<int>& numsArray, int start, int mid, int end, sf::RenderW
    sub-array of arr to be sorted */
 void mergeSort(std::vector<int>& numsArray, int l, int r, sf::RenderWindow& window)
 {
-    drawingUtils::grabEvents(window);
-
     if (l < r) {
 
         // Same as (l + r) / 2, but avoids overflow
